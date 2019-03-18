@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order barang</title>
+</head>
+<body>
+<h2>Order Barang</h2>
+Nama Barang:<br>
+<select>
+  <option value="Samsung">Samsung</option>
+  <option value="Iphone">Iphone</option>
+  <option value="Huawei">Huawei</option>
+  <option value="China">China</option>
+</select><br>
+<p2>Tipe:</p2>
+<form action="/action_page.php">
+  <input type="radio" name="Tipe" value="Smartphone"> Smartphone
+   <input type="radio" name="Tipe" value="Smartwatch"> Smartwatch<br>
+<p3>Kondisi:</p3><br>
+<form action="/action_page.php" method="get">
+  <input type="checkbox" name="kondisi" value="Smartphone"> Baru
+  <input type="checkbox" name="kondisi" value="Smartphone" checked> Bekas<br>
+</form>
+
+<form action="/action_page.php">
+Harga Barang:<br>
+<input type="number" name="HargaBarang"><br>
+Stok Barang:<br>
+<input type="number" name="DiskonBarang">
+<br>
+Diskon Barang:<br>
+<input type="number" name="DiskonBarang">
+<br>
+Tanggal pembelian:<br>
+<input type="date" name="TanggalBarang"><br>
+Desktripsi Barang:<br>
+<textarea></textarea><br>
+Masukkan Jam pembelian<br>
+<input type="time" name="time"><br>
+<input onclick="myFunction()" type="submit" value="simpan">
+</form>
+
+
+  
+</body>
+</html>
+<script type="text/javascript">
+	function myFunction(){
+		alert('berhasil')
+	}
+</script>
