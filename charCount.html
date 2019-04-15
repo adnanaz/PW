@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Web App</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<script>
+		hitungChar = () => {
+			console.log ("a");
+			var s = document.getElementById("txt").value.length;
+			console.log(s);
+			document.getElementById("jml").innerHTML = s;
+		}
+		
+		function reverseString(){
+			var s = document.getElementById("txt").value;
+			console.log(s.split('').reverse().join(''))
+			document.getElementById("rev").innerHTML = s.split('').reverse().join('');
+		}
+
+
+	</script>
+
+	</head>
+<body>
+	<div class="container">
+		<h1>Isikan Text</h1>
+		<input type="text" class="form-control" onkeyup="hitungChar()" id="txt"/>
+		<p>Jumlah karakter : <span id="jml">0</span>
+
+			<br /> <br />
+			<button type="button" class="btn btn-success" onclick="reverseString()">Reverse String</button>
+			<p>Hasil : <span id="rev"></span></p>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Web App</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<script>
+		detailText = () => {
+			console.log ("Detail");
+			document.getElementById("demo").innerHTML = "Liverpool Football Club /ˈlɪvərpuːl/ (dikenal pula sebagai Liverpool atau The Reds) adalah sebuah klub sepak bola asal Inggris yang berbasis di Kota Liverpool. Saat ini Liverpool adalah peserta Liga Utama Inggris";
+			document.getElementsByTagName("h1")[0].className = "text-danger";
+		}
+
+		simpleText = () => {
+			console.log("Simple");
+			document.getElementById("demo").innerHTML = "Liverpool football Club adalah. .";
+			document.getElementsByTagName("h1")[0].className = "text-dark";
+
+		}
+	</script>
+
+</head>
+<body>
+	<div class="container">
+		<h1>Liverpool F.C</h1>
+		<p id="demo">"Liverpool football Club adalah. ."</p>
+
+		<button type="button" class="btn btn-info"  onclick="detailText()">Detail</button>
+		<button type="button" class="btn btn-warning" onclick="simpleText()">Simple</button>
+	</div>
+
+</body>
+</html>
