@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+	<div class="container">
+		<h1>Kabupaten Yogyakarta</h1>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>No </th>
+					<th>Nama </th>
+					<th>Wisata</th>
+				</tr>
+			</thead>
+			<tbody id="tbl"></tbody>
+		</table>
+	</div>
+	<script type="text/javascript">
+		var kab = ["Sleman","Bantul","Kulonprogo","Gunung kidul"];
+		var obj = [{'nama' : 'Sleman','spot' : 'Merapi'},
+				  {'nama' : 'Bantul','spot' : 'Paris'},
+				  {'nama' : 'Kulonprogo','spot' : 'NYIA'},
+				  {'nama' : 'Gunung kidul','spot' : 'Krakal'}];
+		console.log(obj);
+		const tbody = document.getElementById('tbl');
+		let i=1;
+		for (const key in obj){
+		
+
+			const tr = document.createElement('tr');
+			const td1 = document.createElement('td');
+			const td2 = document.createElement('td');
+			const td3 = document.createElement('td');
+
+			tbody.appendChild(tr);
+			
+			tr.appendChild(td1);
+			td1.textContent =i;
+			i++;
+
+			tr.appendChild(td2)
+			td2.textContent = obj[key].nama;
+
+			tr.appendChild(td3)
+			td3.textContent = obj[key].spot;
+		}
+
+		/*
+		const tbody = document.getElementById('tbl');
+		console.log(kab);
+		for(let i =0; i<kab.length; i++){
+			const tr = document.createElement('tr');
+			const td1 = document.createElement('td');
+			const td2 = document.createElement('td');
+
+			tbody.appendChild(tr);
+
+			tbody.appendChild(td1);
+			td1.textContent=i+1;
+
+			tbody.appendChild(td2)
+			td2.textContent = kab[i];
+			if(kab[i] == "Kulonprogo"){
+				td2.setAttribute("class", "text-success");
+			}
+
+		}*/
+	</script>
+
+
+</head>
+<body>
+
+</body>
+</html>
