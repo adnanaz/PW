@@ -6,8 +6,13 @@
 	<title>My Web App</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
 	<script>
-		hitungChar = () => {
+		/*hitungChar = () => {
 			console.log ("a");
 			var s = document.getElementById("txt").value.length;
 			console.log(s);
@@ -18,7 +23,24 @@
 			var s = document.getElementById("txt").value;
 			console.log(s.split('').reverse().join(''))
 			document.getElementById("rev").innerHTML = s.split('').reverse().join('');
-		}
+		}*/
+	$(function(){
+
+		$('#txt').keyup(function(){
+			var c = this.value.length;
+			//kalo gapake this $('#txt').value.length;
+
+		$('#jml').html(c)
+		});
+
+		$('#btn').click(function(){
+			var s = $('#txt').val().split('').reverse().join('')
+		$('#rev').html(s)
+		});
+
+
+
+	});
 
 
 	</script>
@@ -27,11 +49,11 @@
 <body>
 	<div class="container">
 		<h1>Isikan Text</h1>
-		<input type="text" class="form-control" onkeyup="hitungChar()" id="txt"/>
+		<input type="text" class="form-control"  id="txt"/>
 		<p>Jumlah karakter : <span id="jml">0</span>
 
 			<br /> <br />
-			<button type="button" class="btn btn-success" onclick="reverseString()">Reverse String</button>
+			<button id="btn" type="button" class="btn btn-success">Reverse String</button>
 			<p>Hasil : <span id="rev"></span></p>
 
 
