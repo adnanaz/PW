@@ -5,9 +5,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>My Web App</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 
 	<script>
-		detailText = () => {
+		$(function(){
+			console.log ('hello world');
+
+			$("#detail").click(function(){
+				//console.log('click detail');
+
+				$("#demo").html('Liverpool Football Club /ˈlɪvərpuːl/ (dikenal pula sebagai Liverpool atau The Reds) adalah sebuah klub sepak bola asal Inggris yang berbasis di Kota Liverpool. Saat ini Liverpool adalah peserta Liga Utama Inggris');
+			});
+			$("#simple").click(function(){
+				//console.log('click simple');
+				$("#demo").html('Liverpool football Club adalah. .');
+
+
+
+			});
+		});
+		/*detailText = () => {
 			console.log ("Detail");
 			document.getElementById("demo").innerHTML = "Liverpool Football Club /ˈlɪvərpuːl/ (dikenal pula sebagai Liverpool atau The Reds) adalah sebuah klub sepak bola asal Inggris yang berbasis di Kota Liverpool. Saat ini Liverpool adalah peserta Liga Utama Inggris";
 			document.getElementsByTagName("h1")[0].className = "text-danger";
@@ -18,7 +38,7 @@
 			document.getElementById("demo").innerHTML = "Liverpool football Club adalah. .";
 			document.getElementsByTagName("h1")[0].className = "text-dark";
 
-		}
+		} */  
 	</script>
 
 </head>
@@ -27,8 +47,8 @@
 		<h1>Liverpool F.C</h1>
 		<p id="demo">"Liverpool football Club adalah. ."</p>
 
-		<button type="button" class="btn btn-info"  onclick="detailText()">Detail</button>
-		<button type="button" class="btn btn-warning" onclick="simpleText()">Simple</button>
+		<button id="detail" type="button" class="btn btn-info"  onclick="">Detail</button>
+		<button id="simple" type="button" class="btn btn-warning" onclick="">Simple</button>
 	</div>
 
 </body>
